@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		span{
+			float: left;
+			width:50px;
+			height:20px;
+			text-align: center;
+			line-height:20px;
+			border:1px solid black;
+			border-radius: 2px;
+		}
+		.act{
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<input id="txt" type="type" value="" ><br/><br/>
+	<span>弱</span><span>中</span><span>强</span>
+</body>
+</html>
+<script src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+	// function $(str){
+	// 	if(str.charAt(0)=="#"){
+	// 		return document.getElementById(str.substring(1));
+	// 	}else if(str.charAt(0)=="."){
+	// 		return document.getElementsByClassName(str.substring(1));
+	// 	}else{
+	// 		return document.getElementsByTagName(str);
+	// 	}
+	// }
+
+	// var spanObj = $("span");
+	// $("#txt").onkeyup = function (){
+    $("#txt").keyup(function(){
+      let num = 0;
+      let txt = $("#txt").val();
+      if((/[a-zA-Z]+/gi).test(txt)){
+			num +=1;
+      }
+      if((/[\d]+/gi).test(txt)){
+        num +=1;
+      }
+      if((/[^A-Za-z\d]+/gi).test(txt)){
+        num +=1;
+      }
+      $("span").each(function(i){
+				if(i == num-1){
+					$(this).addClass("act");
+				}else{
+					$(this).removeClass("act");
+				}
+			})
+    })
+</script>

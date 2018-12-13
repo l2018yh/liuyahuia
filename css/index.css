@@ -1,0 +1,220 @@
+@charset "utf-8";
+/* CSS Document */
+body,p,dl,dd,ul,ol,li,div,h1,h2,h3,h4,h5,h6,form,input,table,tr,td{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "微软雅黑",Arial;
+}
+ul,ol{
+	list-style:none;
+}
+img{
+	border: 0;
+}
+a{
+	text-decoration: none;
+}
+/*轮播图 */
+.slider_box{
+    width: 100%;
+    height: 478px;
+    position: relative;
+    overflow: hidden;
+}
+/* section */
+section ul:nth-child(1){
+    height: 110px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+}
+section ul:nth-child(1) li{
+    float: left;
+    width:176px;
+    height: 53px;
+    background: #fff;
+} 
+section ul:nth-child(1) p{
+    float: left;
+    margin-left:10px;
+    line-height: 54px;
+    color:#666666;
+}
+section ul:nth-child(1) li:nth-child(1) span{
+    float: left;
+    width: 53px;
+    height: 53px;
+    background: url("../img/bgr1.png") no-repeat;
+    background-position: 0 -52px;
+}
+section ul:nth-child(1) li:nth-child(2) span{
+    float: left;
+    width: 53px;
+    height: 53px;
+    background: url("../img/bgr1.png") no-repeat;
+    background-position: -52px -52px;
+}
+section ul:nth-child(1) li:nth-child(3) span{
+    float: left;
+    width: 53px;
+    height: 53px;
+    background: url("../img/bgr1.png") no-repeat;
+    background-position: -105px -52px;
+}
+section ul:nth-child(1) li:nth-child(4) span{
+    float: left;
+    width: 53px;
+    height: 53px;
+    background: url("../img/bgr1.png") no-repeat;
+    background-position: -158px -52px;
+}
+section .two_ul{
+    width:1202px;
+    height: 210px;
+    /* margin-top:30px;
+    margin-bottom:20px; */
+    margin:50px auto;
+}
+section .two_ul li{
+    margin-right: 10px;
+    float: left;
+}
+/*新品推荐 */
+.goods{
+    width: 1202px;
+    margin:0 30px;
+}
+.new_goods{
+    height: 30px;
+    line-height: 30px;
+    background:url("../img/diy-title.png") no-repeat center;
+}
+.new_goods h3{
+    color:#666666;
+    font-size:20px;
+    font-weight: 500;
+    padding:0 20px 0 10px;
+    float: left;
+    background: #f5f5f5;
+}
+.new_goods .more{
+    color:#666666;
+    font-size:18px;
+    padding: 0 10px;
+    float: right;
+    background: #f5f5f5;
+}
+.new_goods .more:hover{
+    color:#d93732;
+}
+.goods_pic {
+    margin-top:20px;
+}
+.goods_pic .renqi{
+    width: 1202px;
+    height: 250px;
+    margin:0 auto;
+}
+.renqi a{
+    margin-right: 6px;
+}
+.goods_pic .yunduan{
+    width:1202px;
+    margin-top:10px;
+}
+.yunduan a{
+    margin-right:4px;
+}
+.goods_pic .one_li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.goods_pic .two_ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:14px;
+}
+.goods_liwu{
+    width: 1202px;
+    height: 625px;
+    margin:0 auto;
+    margin-top:50px;
+}
+.goods_liwu .papa{
+    height: 567px;
+    float: left;
+}
+.goods_liwu .micus{
+    height: 968px;
+    width:968px;
+    height:567px; 
+    float: left;
+}
+.goods_liwu .micus li{
+    font-size: 12px;
+    background: #fff;
+    text-align: center;
+    width: 230px;
+    height: 223px;
+    padding:24px 0 29px;
+    margin-left:12px;
+    margin-bottom: 14px;
+    float: left;
+}
+.goods_liwu ul a{
+    color:black;
+    display: block;
+    transition-property: color;
+    transition-duration: .3s;
+}
+.goods_liwu ul a:hover{
+    color:#d93732;
+}
+/* 热评商品 */
+.reping{
+    width: 1200px;
+    height: 500px;
+    margin:0 auto;
+    margin-top:50px;
+}
+.reping h3{
+    width: 200px;
+    color:black;
+}
+.reping li{
+    padding:0 14px 15px;
+    background: #fff;
+    float: left;
+    width:250px ;
+    margin:30px 10px 0px;
+}
+.reping a{
+    font-size: 14px;
+    display: block;
+    margin-top:20px;
+    line-height: 20px;
+    color:black;
+    margin-bottom:15px;
+    transition-property: color;
+    transition-duration: .3s;
+}
+.reping a:hover{
+    color:#d93732;
+}
+.reping p{
+    font-size: 12px;
+    color:#9e9e9e;
+    font-size: 14px;
+}
+.reping .bei{
+    margin-top:5px;
+    color: #333333;
+
+}
+
+
