@@ -105,16 +105,16 @@
     <!-- 放大镜 -->
     <div class="sp">
         <ul id="imgList" class="min_fdj">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li class="img1"></li>
+            <li class="img2"></li>
+            <li class="img3"></li>
+            <li class="img4"></li>
         </ul>
         <div id="bigBox" class="max_fdj">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="bigImgSpan"></span>
+            <span class="bigImgSpan1"></span>
+            <span class="bigImgSpan2"></span>
+            <span class="bigImgSpan3"></span>
+            <span class="bigImgSpan4"></span>
             <div id="mirrorBox"></div>
             <div id="showBox"></div>
         </div>
@@ -320,7 +320,22 @@
                 for(let i=0;i<data.length;i++){
                     if(goodsId == data[i].goodsId){
                         //拿到其中对应行
-                        $(".bigImgSpan").css({"background-Image":"url("+data[i].goodsImg+")"});
+                        //小盒子中的图
+                        $(".img1").css({"backgroundImage":"url("+data[i].beiyong5+")"});
+                        $(".img2").css({"backgroundImage":"url("+data[i].beiyong6+")"});
+                        $(".img3").css({"backgroundImage":"url("+data[i].beiyong7+")"});
+                        $(".img4").css({"backgroundImage":"url("+data[i].beiyong8+")"});
+                        
+                        //大盒子中的图
+                        $(".bigImgSpan1").css({"backgroundImage":"url("+data[i].beiyong1+")"});
+                        $(".bigImgSpan2").css({"backgroundImage":"url("+data[i].beiyong2+")"});
+                        $(".bigImgSpan3").css({"backgroundImage":"url("+data[i].beiyong3+")"});
+                        $(".bigImgSpan4").css({"backgroundImage":"url("+data[i].beiyong4+")"});
+                        
+                        // $($("#bigBox:nth-child(1)")).css({"background-image":"url("+data[i].beiyong1+")"});
+                        // $($("#bigBox:nth-child(2)")).css({"bacbgroung-image":"url("+data[i].beiyong2+")"});
+                        // $($("#bigBox:nth-child(3)")).css({"bacbgroung-image":"url("+data[i].beiyong3+")"});
+                        // $($("#bigBox:nth-child(4)")).css({"bacbgroung-image":"url("+data[i].beiyong4+")"});
                         $(".goodsName").html(data[i].goodsName);
                         $(".goodsPrice").html(data[i].goodsPrice);
                     }
@@ -328,9 +343,8 @@
             }
         })
     })
-</script>
-<script type="text/javascript" >
-//点击加入购物车，跳到购物车
+
+    //点击加入购物车，跳到购物车
     $(function(){
         $(".gm").on("click",$(".goumei"),function(){
             //点击的当前li的下标
@@ -340,7 +354,10 @@
             location.href = "shopcar.html";
         })
 })
+</script>
 
+
+<script type="text/javascript" >
 $(document).ready(function(){
 //礼物详情固定   
     // $(".shaidan_fixed").css({"display":"none","position":"absolute","left":"0","top":"770"}});
@@ -355,7 +372,7 @@ $(document).ready(function(){
     })
 }) 
 </script>
-
+<!-- 放大镜 -->
 <script type="text/javascript">
     function $$(str){   //id  class tagname
         if(str.charAt(0) == "#"){
@@ -369,7 +386,7 @@ $(document).ready(function(){
 
     let lis= $$("#imgList").children;
     let ims = $$("#bigBox").getElementsByTagName("span");
-
+    console.log(ims);
 //	遍历li
 	for(let i=0; i<lis.length; i++){
         let index = i;

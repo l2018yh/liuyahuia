@@ -8,6 +8,7 @@ $(function(){
         async:true,
         data:{},
         success:function(data){
+        // console.log(data);
             let length = data.length;
             for(i=0; i<length;i++){
                 let str = "<li id='"+data[i].goodsId+"'>\
@@ -17,7 +18,7 @@ $(function(){
                 <p calss = 'pinggjia_a'><span>1</span>评价</p>\
                 </li>";
                 $(".fenlei_bb").append(str);
-            console.log(length);
+            console.log(data);
             }
         }
     })

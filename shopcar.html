@@ -25,28 +25,28 @@
     <!-- 回到顶部 -->
     <div class="top">
         <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4006112156&amp;cref=http://www.liwuyou.com/&amp;ref=&amp;f=1&amp;ty=1&amp;ap=&amp;as=" target="_blank""><i class="icn_a"></i></a>
-        <a href="http://www.liwuyou.com"><i class="icn_b"></i></a>
+        <a href="##"><i class="icn_b"></i></a>
     </div>
 <!-- section -->
     <section>
-            <div class="lianxi">
-                    <p><a href="index.html"> 首页</a>   /   购物车</p>
-                    <p>服务热线：0755-86380505、0755-86380506（8:00-24:00）<a class="jiaotan" href="##">QQ在线交谈</a></p>
-                </div>
-            <div class="box"> 
-            <table > 
+        <div class="lianxi">
+            <p><a href="index.html"> 首页</a>   /   购物车</p>
+            <p>服务热线：0755-86380505、0755-86380506（8:00-24:00）<a class="jiaotan" href="##">QQ在线交谈</a></p>
+        </div>
+        <div class="box"> 
+            <table> 
                 <thead class="tb_head"> 
-                <th class="check"><input type="checkbox" id="checkedAll"/>选择</th> 
-                <th class="info">商品信息</th> 
-                <th>单价</th> 
-                <th>数量</th> 
-                <th>库存</th> 
-                <th>小计</th>
-                <th>操作</th> 
+                    <th class="check"><input type="checkbox" id="selectAll"/>选择</th> 
+                    <th class="info">商品信息</th> 
+                    <th>单价</th> 
+                    <th>数量</th> 
+                    <th>库存</th> 
+                    <th>小计</th>
+                    <th>操作</th> 
                 </thead> 
                 <tbody id="tb" class="tb_tr"> 
-                    <tr> 
-                        <td><input type="checkbox" /></td> 
+                    <!-- <tr> 
+                        <td><input class="checkt" type="checkbox" /></td> 
                         <td>
                             <div>
                                 <img src="img/sp02.jpg" alt="">
@@ -56,7 +56,7 @@
                                 <p>礼物颜色：薄荷绿</p>
                             </div>
                         </td> 
-                        <td>￥<span>88.0</span></td> 
+                        <td class="proPirce">￥<span>88.0</span></td> 
                         <td class="jishu"> 
                             <span class="jian">-</span> 
                             <input type="text" value="1" readonly="readonly"/> 
@@ -65,13 +65,13 @@
                         <td> 
                             <span>有库存</span> 
                         </td> 
-                        <td>￥<span class="zhongshu">88.0</span></td>
-                        <td id="del"> 
+                        <td class="money">￥<span class="proMoney">88.0</span></td>
+                        <td class="del"> 
                             <a href="##"></a> 
                         </td> 
                     </tr>
                     <tr> 
-                        <td><input type="checkbox" /></td> 
+                        <td><input class="checkt" type="checkbox" /></td> 
                         <td>
                             <div>
                                 <img src="img/sp02.jpg" alt="">
@@ -81,7 +81,7 @@
                                 <p>礼物颜色：薄荷绿</p>
                             </div>
                         </td> 
-                        <td>￥<span>88.0</span></td> 
+                        <td class="proPirce">￥<span>88.0</span></td> 
                         <td class="jishu"> 
                             <span class="jian">-</span> 
                             <input type="text" value="1" readonly="readonly"/> 
@@ -90,18 +90,18 @@
                         <td> 
                             <span>有库存</span> 
                         </td> 
-                        <td>￥<span class="zhongshu">88.0</span></td>
-                        <td id="del"> 
+                        <td class="money">￥<span class="proMoney">88.0</span></td>
+                        <td class="del"> 
                             <a href="##"></a> 
                         </td> 
-                    </tr>  
+                    </tr>   -->
                 </tbody> 
             </table> 
             <div class="jg">
                 <div><i></i><a href="##">继续购物</a></div>
                 <div class="zj">
-                <p>共计<span id="totalCount">1</span>件商品&nbsp;&nbsp;合计：￥<span id="result">88.0</span></p>
-                <p>去结账</p>
+                    <p>共计<span class="totalCount">1</span>件商品&nbsp;&nbsp;合计：￥<span class="totalPirces">88.0</span></p>
+                    <p>去结账</p>
                 </div>
             </div>
         </div> 
@@ -210,89 +210,109 @@
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/checkall.js"></script>
+<!-- <script type="text/javascript" src="js/shoppingcar.js"></script> -->
+<!-- 购物车 -->
 <script type="text/javascript"> 
     $(function(){
-        //全选
-        $("#checkedAll").bindCheckAll($(":checkbox").not("#checkedAll"));
-    })
-    //删除
-    for(var i=0;i<shanchu.length;i++){ 
-        shanchu[i].onclick=function(){ 
-            var conf = confirm('确定删除这件商品吗？'); 
-            if(conf){ 
-            //removeChild 删除节点  
-                tb.removeChild(this.parentNode.parentNode);  
-            } 
-        } 
-    }
-    // $("#del").each(function(i){
-    //     $(this).click(function(){
-    //         let conf = confirm("你确定删除吗？");
-    //         if(conf){
-    //             $("#del").parent().remove();
-    //         }
-    //     })
-    // })
-</script>
-
-<script type="text/javascript">
-window.onload=function(){ 
-    var checkedAll=document.getElementById("checkedAll"); 
-    var tb=document.getElementById("tb"); 
-    var oinput=tb.getElementsByTagName('input'); 
-    var jian=document.getElementsByClassName('jian'); 
-    var jia=document.getElementsByClassName('jia'); 
-    var shanchu=tb.getElementsByTagName('a'); 
-    //加 
-    for(var i=0;i<jia.length;i++){ 
-        jia[i].onclick=function(){ 
-            //previousSibling上一个兄弟节点  
-            var val  = parseInt(this.previousSibling.previousSibling.value);
-            this.previousSibling.previousSibling.value = val + 1; 
-            // console.log(val);
-            jisuan(this);
-        } 
-    } 
-    //减 
-    for(var i=0;i<jian.length;i++){ 
-        jian[i].onclick=function(){ 
-        //nextSibling下一个兄弟节点 
-            var val = parseInt(this.nextSibling.nextSibling.value); 
-        if(val > 1) { 
-            this.nextSibling.nextSibling.value = val - 1; 
-        } 
-        jisuan(this);
-        } 
-    } 
-    //操作删除 
-    for(var i=0;i<shanchu.length;i++){ 
-        shanchu[i].onclick=function(){ 
-            var conf = confirm('确定删除这件商品吗？'); 
-            if(conf){ 
-            //removeChild 删除节点  
-                tb.removeChild(this.parentNode.parentNode);  
-            } 
-        } 
-    } 
-        
-    //总价 
-    function jisuan(t){ 
-        var tr=t.parentNode.parentNode;  
-        var result=document.getElementById("result"); 
-        var td=tr.getElementsByTagName('td');
-        var num = td[2].getElementsByTagName("span");
-        td[5].getElementsByTagName('span')[0].innerHTML = parseInt(num[0].innerHTML)*parseInt(t.parentNode.getElementsByTagName('input')[0].value);
-        
-    }
-    //总件数
-    var tr = tb.getElementsByTagName("tr");
-        for(let i=0; i<tr.length; i++){
-                let totalCount = 0;
-                let totalMoney = 0;
-                totalCount += parseInt(document.getElementsByClassName("jishu")[i].value);
-                totalMoney += parseInt(document.getElementsByClassName("zhongshu")[i].innerHTML);
+    //获取ajax请求获取所有的商品
+    $.ajax({
+        type:"post",
+        url:"php/getGoodsList.php",
+        dataType:"json",
+        async:true,
+        data:{},
+        success:function(data){
+            console.log(data);
+            for(let i =0; i<data.length;i++){
+                let str = "<tr><td><input class = 'checkt' type = 'checkbox'/></td>\
+                <td><div><img src = '"+data[i].beiyong6+"'></div>\
+                <div><p>恋爱云端</p><p>礼物颜色：薄荷绿</p></div></td>\
+                <td class = 'proPrice'>￥<span>"+data[i].goodsPrice+"</span></td><td class='jishu'>\
+                <span class='jian'>-</span><input type='text' value ='1' readonly='readonly'/>\
+                <span class='jia'>+</span></td><td><span>"+data[i].goodsDesc+"</span></td>\
+                <td class = 'money'>￥<span class='proMoney'>"+data[i].goodsPrice+"</span></td>\
+                <td class = 'del'><a href = '##'></a></td></tr>";
+                $(".tb_tr").append(str);
             }
-        $("#totalCount").innerHTML = totalCount;
-        $("#result").innerHTML = totalMoney;
-    } 
- </script>
+        }
+    })
+})
+
+    // 全选
+	$("#selectAll").click(function(){	
+		$(".checkt").prop("checked", this.checked);
+		change();
+	})
+
+// 单选
+	$(".checkt").click(function(){
+		change();
+	})
+
+// 删除
+	$(".del").click(function(){
+		$(this).parents("tr").remove();
+	change();
+	})
+
+// // 删除所有
+	$(".delAll").click(function(){
+		$(".checkt:checked").parents("tr").remove();
+		change();
+	})
+
+// 减
+	$(".jian").click(function(){
+	// 改变数量
+		var _this = this;
+		let count1 = parseInt($(this).siblings("input").val());
+		$(this).siblings("input").val(function(){
+			count1--;
+			if(count1 <0){
+				return 0;
+			}else{
+				return (count1);
+			}
+		});
+		//改变小计
+		$(this).parents("tr").find(".proMoney").html(function(){
+			return count1 * parseInt($(this).parents("tr").find(".proPirce span").html());
+		})	
+		change();
+	})
+//加
+	$(".jia").click(function(){
+	// 改变数量
+		var _this = this;
+		let count2 = parseInt($(this).siblings("input").val());
+		$(this).siblings("input").val(function(){	
+			count2++;
+			return (count2);
+		})	
+		//改变小计
+		$(this).parents("tr").find(".proMoney").html(function(){
+			return count2*parseInt($(this).parents("tr").find(".proPirce span").html());
+		})
+		change();
+	})
+	
+// 改变合计和件数的方法
+	function change(){
+		$("#selectAll").prop("checked", $(".checkt:checked").length == $(".checkt").length);
+	// 改变件数
+		let vals = 0 ; 
+		$(".jishu").each(function(){
+			vals += parseInt($(this).find("input").val());
+			$(".totalCount").html(vals);
+		})
+	// 改变合计
+		$(".totalPirces").html(function(){
+			var pic = 0;
+			$(".money").each(function(){
+				pic += parseInt($(this).find(".proMoney").html());
+			})
+			return pic;
+		})
+	}
+
+</script>

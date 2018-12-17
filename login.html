@@ -253,7 +253,6 @@
                 "data":str,
                 "success":function(data){
                     if(data == 1){
-        console.log($username,$userpass);
                         //插入成功，将用户名存入cookie
                         // let d = new date();
                         // let dd = d.
@@ -265,7 +264,8 @@
                     }
                 }
             })
+        }else{
+            alert("密码有误");
         }
     })
-
 </script>

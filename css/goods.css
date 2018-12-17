@@ -91,7 +91,7 @@ section{
     /* z-index: 0; */
     /* overflow: hidden; */
 }
-.max_fdj span:nth-child(1){
+/* .max_fdj span:nth-child(1){
     background: url("../img/max04.jpg") no-repeat;
 }
 .max_fdj span:nth-child(2){
@@ -102,7 +102,7 @@ section{
 }
 .max_fdj span:nth-child(4){
     background: url("../img/max03.jpg") no-repeat;
-}
+} */
 .max_fdj img{
     position: absolute;
     top:0;
@@ -126,7 +126,7 @@ section{
     background-size: 1500px 1200px;
     display: none;
 }
-.min_fdj li:nth-child(1) {
+/* .min_fdj li:nth-child(1) {
     background-image: url(../img/sp01.jpg);
 }
 .min_fdj li:nth-child(2) {
@@ -137,7 +137,7 @@ section{
 }
 .min_fdj li:nth-child(4) {
     background-image: url(../img/sp04.jpg);
-} 
+}  */
 
 
 .sp .jg{
